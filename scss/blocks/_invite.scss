@@ -1,0 +1,23 @@
+.invite {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  &__body {
+    text-align: center;
+    font-family: Cagliostro;
+    max-width: 500px;
+    font-size: 20px;
+    color: hwb(43 27% 27% / 0.8);
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__header {
+    font-family: Tangerine;
+    font-size: 80px;
+    color: #ba9845;
+    margin-bottom: 30px;
+  }
+}

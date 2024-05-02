@@ -1,1 +1,369 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+a,
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* cagliostro-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Cagliostro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/cagliostro-v21-latin-regular.woff2") format("woff2"), url("../fonts/cagliostro-v21-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* tangerine-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Tangerine";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/tangerine-v17-latin-regular.woff2") format("woff2"), url("../fonts/tangerine-v17-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* tangerine-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Tangerine";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/tangerine-v17-latin-700.woff2") format("woff2"), url("../fonts/tangerine-v17-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1240px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+}
+.hero::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 300px;
+  height: 315px;
+  background-image: url("../../img/header-2.png");
+  background-repeat: no-repeat;
+  left: calc(100% - 300px);
+  bottom: 0;
+  background-size: contain;
+}
+.hero::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background-image: url("../../img/header-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hero__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero__container::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100px;
+  height: 170px;
+  background-image: url("../../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  right: 0;
+  top: calc(0% + 15px);
+}
+.hero__header {
+  font-family: Tangerine;
+  font-weight: bold;
+  font-size: 60px;
+  color: #ba9845;
+}
+.hero__subheader {
+  font-family: Cagliostro;
+  text-align: center;
+  color: rgba(186, 153, 69, 0.5);
+  margin-bottom: 40px;
+}
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 170px 190px;
+  background-image: url("../../img/ramka.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.invite {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.invite__body {
+  text-align: center;
+  font-family: Cagliostro;
+  max-width: 500px;
+  font-size: 20px;
+  color: hwb(43 27% 27%/0.8);
+}
+.invite__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.invite__header {
+  font-family: Tangerine;
+  font-size: 80px;
+  color: #ba9845;
+  margin-bottom: 30px;
+}
+
+.calendar {
+  position: relative;
+  margin-bottom: 30px;
+}
+.calendar::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 280px;
+  height: 430px;
+  background-image: url("../../img/calendar-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: calc(0% - 140px);
+  left: 0;
+}
+.calendar::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 180px;
+  height: 260px;
+  background-image: url("../../img/calendar-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: calc(0% - 140px);
+  right: 0;
+}
+.calendar__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.calendar__header {
+  font-family: Tangerine;
+  font-size: 80px;
+  color: #ba9845;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.calendar__img {
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 35px;
+}
+.calendar__wrapper {
+  position: relative;
+  margin-bottom: 50px;
+}
+.calendar__wrapper::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 63px;
+  height: 59px;
+  background-image: url("../../img/angle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  bottom: 0;
+  right: calc(0% + 35px);
+}
+
+.program__date, .program__time {
+  font-family: cagliostro;
+  color: #ba9845;
+  font-size: 22px;
+}
+.program__header {
+  font-family: Tangerine;
+  font-size: 80px;
+  color: #ba9845;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.program__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.program__line {
+  width: 2px;
+  height: 80px;
+  border: none;
+  background-color: #ba9845;
+  margin: 0;
+}
+.program__location {
+  max-width: 335px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.program__location-header {
+  font-family: cagliostro;
+  color: #ba9845;
+  font-size: 30px;
+}
+.program__location-icon {
+  width: 15px;
+}
+.program__location-map {
+  background-color: #ba9845;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  color: #fff;
+  font-family: cagliostro;
+  width: 100%;
+  margin-bottom: 2px;
+}
+.program__location-subtext {
+  font-family: cagliostro;
+  font-size: 20px;
+  color: #ba9845;
+}
+.program__main-img-link {
+  width: 150px;
+}
+.program__subtext {
+  font-family: cagliostro;
+  font-size: 10px;
+}
+.program__time-wrapper {
+  max-width: 130px;
+  width: 100%;
+}
+.program__wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.final {
+  position: relative;
+}
+.final::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 170px;
+  height: 300px;
+  top: calc(0% + 100px);
+  left: 0;
+  background-image: url("../../img/final.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.final::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 500px;
+  background-image: url("../../img/footer.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.final__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.final__header {
+  font-family: Tangerine;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+  color: #ba9845;
+  margin-bottom: 50px;
+}
+.final__img {
+  width: 70px;
+}
+.final__link {
+  font-family: cagliostro;
+  text-decoration: none;
+  font-size: 20px;
+  color: #726851;
+  margin-bottom: 50px;
+}
+.final__text {
+  margin-left: 55px;
+}
+.final__wrapper {
+  display: flex;
+  align-items: center;
+  font-family: cagliostro;
+  font-size: 25px;
+  padding: 20px 40px;
+  border: 2px solid #ba9845;
+  margin-bottom: 100px;
+}/*# sourceMappingURL=main.css.map */
