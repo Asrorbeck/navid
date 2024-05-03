@@ -82,7 +82,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .program {
     &__header {
       font-size: 56px;
@@ -127,6 +127,26 @@
 
     &__subtext {
       font-size: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .program {
+    &__location-header {
+      font-size: 16px;
+    }
+
+    &__location-map {
+      font-size: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .program {
+    &__location-header {
+      font-size: 13px;
     }
   }
 }

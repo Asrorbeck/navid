@@ -136,11 +136,11 @@ html {
   justify-content: center;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .hero::after {
-    width: 380px;
-    height: 400px;
-    left: calc(100% - 380px);
+    width: 300px;
+    height: 315px;
+    left: calc(100% - 300px);
   }
   .hero__container {
     background-position: 0px;
@@ -184,7 +184,7 @@ html {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .invite__body {
     font-size: 16px;
   }
@@ -260,7 +260,7 @@ html {
   right: calc(0% + 35px);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .calendar::before {
     width: 160px;
     height: 360px;
@@ -350,7 +350,7 @@ html {
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .program__header {
     font-size: 56px;
   }
@@ -383,6 +383,19 @@ html {
   }
   .program__subtext {
     font-size: 5px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .program__location-header {
+    font-size: 16px;
+  }
+  .program__location-map {
+    font-size: 4px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .program__location-header {
+    font-size: 13px;
   }
 }
 .final {
@@ -444,7 +457,7 @@ html {
   margin-bottom: 100px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .final {
     padding-bottom: 150px;
   }

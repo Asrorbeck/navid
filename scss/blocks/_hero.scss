@@ -70,12 +70,12 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .hero {
     &::after {
-      width: 380px;
-      height: 400px;
-      left: calc(100% - 380px);
+      width: 300px;
+      height: 315px;
+      left: calc(100% - 300px);
     }
     &__container {
       &::before {
