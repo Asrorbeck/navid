@@ -33,9 +33,9 @@ window.addEventListener("click", function (event) {
   }
 });
 
-window.onload = function () {
-  modal.style.display = "block";
-};
+// window.onload = function () {
+//   modal.style.display = "block";
+// };
 
 musicControl.addEventListener("click", function () {
   if (isPlaying) {
