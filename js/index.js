@@ -114,6 +114,7 @@ function handleRelease() {
         console.error("Error when attempting to play music after sliding:", e);
       });
     musicIcon.src = "./img/unmute.svg";
+    isPlaying = !isPlaying;
   } else {
     slider.style.left = "0px"; // Reset the slider position if not fully slid
   }
