@@ -143,7 +143,7 @@ html {
     left: calc(100% - 380px);
   }
   .hero__container {
-    background-position: 0px 225px;
+    background-position: 0px;
   }
   .hero__container::before {
     width: 67px;
@@ -157,7 +157,7 @@ html {
     margin-bottom: 15px;
   }
   .hero__wrapper {
-    padding-bottom: 90px;
+    padding-bottom: 25px;
   }
 }
 .invite {
@@ -386,6 +386,11 @@ html {
   }
 }
 .final {
+  background-image: url("../../img/footer.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100% 100%;
+  padding-bottom: 650px;
   position: relative;
 }
 .final::before {
@@ -397,17 +402,6 @@ html {
   top: calc(0% + 100px);
   left: 0;
   background-image: url("../../img/final.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-.final::after {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  width: 100%;
-  height: 500px;
-  background-image: url("../../img/footer.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -451,6 +445,9 @@ html {
 }
 
 @media screen and (max-width: 450px) {
+  .final {
+    padding-bottom: 150px;
+  }
   .final::before {
     width: 100px;
     height: 175px;
