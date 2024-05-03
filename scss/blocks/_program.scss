@@ -138,11 +138,11 @@
 @media screen and (max-width: 390px) {
   .program {
     &__location-header {
-      font-size: 16px;
+      font-size: 15px;
     }
 
     &__location-map {
-      font-size: 6px;
+      font-size: 7px;
     }
 
     &__another {
@@ -151,10 +151,18 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
   .program {
     &__location-header {
       font-size: 13px;
+    }
+
+    &__location-map {
+      font-size: 6px;
+    }
+
+    &__another {
+      font-size: 5px;
     }
   }
 }
