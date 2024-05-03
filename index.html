@@ -18,7 +18,28 @@
     <title>Le-invitations.uz</title>
   </head>
   <body>
-    <main class="main">
+    <div id="overlay">
+      <img
+        src="./img/main-logo.png"
+        alt="Logo"
+        class="overlay-logo"
+        id="overlay-logo"
+      />
+      <div id="unlock-slider-container">
+        <span id="slide-text">Slide</span>
+        <!-- Text in the middle of the slider container -->
+        <div id="slider" draggable="true">
+          <img
+            src="./img/slide-arrow.svg"
+            alt="Slide Arrow"
+            id="slider-arrow"
+          />
+          <!-- Arrow inside the slider -->
+        </div>
+      </div>
+    </div>
+
+    <main class="main" id="main-content">
       <section class="hero" data-aos="fade" data-aos-duration="1500">
         <div class="container">
           <div class="hero__container" data-aos="fade" data-aos-duration="3000">
