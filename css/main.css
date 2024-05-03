@@ -447,7 +447,7 @@ html {
 }
 @media screen and (max-width: 390px) {
   .program__location-header {
-    font-size: 15px;
+    font-size: 14px;
   }
   .program__location-map {
     font-size: 7px;
