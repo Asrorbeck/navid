@@ -88,16 +88,24 @@ function handleRelease() {
     container.offsetWidth - slider.offsetWidth
   ) {
     overlay.style.display = "none";
-    audio
-      .play()
-      .then(() => {
-        audio.muted = false;
-      })
-      .catch((e) => {
-        console.error("Error when attempting to play music after sliding:", e);
-      });
+    try {
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            audio.muted = false;
+          })
+          .catch((error) => {
+            console.error("Playback failed:", error);
+            // Handle or log the error
+            // Optionally, inform the user that manual interaction is needed
+          });
+      }
+    } catch (error) {
+      console.error("Error attempting to play audio:", error);
+    }
     musicIcon.src = "./img/unmute.svg";
-    isPlaying = !isPlaying;
+    isPlaying = true;
   } else {
     slider.style.left = "0px";
   }
