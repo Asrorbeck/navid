@@ -30,6 +30,21 @@ img {
   vertical-align: middle;
 }
 
+.fixed {
+  position: fixed;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ba9845;
+  border-radius: 50%;
+  bottom: calc(0% + 35px);
+  left: calc(0% + 35px);
+}
+
 /* cagliostro-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -58,6 +73,40 @@ html {
   scroll-behavior: smooth;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 50% auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  font-family: Montserrat;
+  width: 50%;
+  text-align: center;
+}
+
+.modal-button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: #ba9845;
+  color: #fff;
+}
+
 .container {
   max-width: 1240px;
   margin-right: auto;
@@ -70,6 +119,12 @@ html {
   height: 100vh;
   position: relative;
 }
+.hero.visible::before {
+  opacity: 1;
+}
+.hero.visible::after {
+  opacity: 1;
+}
 .hero::after {
   position: absolute;
   content: "";
@@ -81,6 +136,7 @@ html {
   left: calc(100% - 300px);
   bottom: 0;
   background-size: contain;
+  z-index: -1;
 }
 .hero::before {
   position: absolute;
@@ -349,6 +405,10 @@ html {
   width: 100%;
   justify-content: flex-end;
 }
+.program__main-link {
+  text-decoration: none;
+  width: 100%;
+}
 
 @media screen and (max-width: 700px) {
   .program__header {
@@ -390,7 +450,10 @@ html {
     font-size: 16px;
   }
   .program__location-map {
-    font-size: 4px;
+    font-size: 6px;
+  }
+  .program__another {
+    font-size: 5px;
   }
 }
 @media screen and (max-width: 360px) {

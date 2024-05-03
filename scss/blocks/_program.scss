@@ -80,6 +80,10 @@
     width: 100%;
     justify-content: flex-end;
   }
+  &__main-link {
+    text-decoration: none;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -138,7 +142,11 @@
     }
 
     &__location-map {
-      font-size: 4px;
+      font-size: 6px;
+    }
+
+    &__another {
+      font-size: 5px;
     }
   }
 }
