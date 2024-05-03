@@ -415,7 +415,7 @@ html {
     font-size: 56px;
   }
   .program__date, .program__time {
-    font-size: 15px;
+    font-size: 14px;
   }
   .program__location-header {
     font-size: 18px;
@@ -427,7 +427,7 @@ html {
     max-width: 93px;
   }
   .program__time-wrapper {
-    max-width: 95px;
+    max-width: 85px;
   }
   .program__location-subtext {
     font-size: 9px;
