@@ -67,7 +67,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 170px 190px;
   }
 }
 
@@ -82,6 +81,8 @@
       &::before {
         width: 67px;
       }
+
+      background-position: 0px 225px;
     }
     &__header {
       font-size: 38px;
@@ -92,9 +93,7 @@
       margin-bottom: 15px;
     }
     &__wrapper {
-      padding-left: 90px;
-      padding-right: 90px;
-      padding-top: 150px;
+      padding-bottom: 90px;
     }
   }
 }
