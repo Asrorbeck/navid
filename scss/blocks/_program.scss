@@ -81,3 +81,48 @@
     justify-content: flex-end;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .program {
+    &__header {
+      font-size: 56px;
+    }
+
+    &__date,
+    &__time {
+      font-size: 15px;
+    }
+
+    &__location-header {
+      font-size: 18px;
+    }
+
+    &__location-map {
+      font-size: 7px;
+    }
+
+    &__main-img-link {
+      max-width: 93px;
+    }
+
+    &__time-wrapper {
+      max-width: 95px;
+    }
+
+    &__location-subtext {
+      font-size: 9px;
+    }
+
+    &__location {
+      max-width: 160px;
+    }
+
+    &__another {
+      font-size: 6px;
+    }
+
+    &__location-icon {
+      width: 8px;
+    }
+  }
+}

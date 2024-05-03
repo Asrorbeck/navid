@@ -21,3 +21,17 @@
     margin-bottom: 30px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .invite {
+    &__body {
+      font-size: 16px;
+    }
+    &__container {
+    }
+    &__header {
+      font-size: 56px;
+      margin-bottom: 25px;
+    }
+  }
+}

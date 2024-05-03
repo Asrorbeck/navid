@@ -31,6 +31,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background-image: url("../../img/ramka.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     &::before {
       position: absolute;
       display: inline-block;
@@ -64,9 +68,33 @@
     align-items: center;
     justify-content: center;
     padding: 170px 190px;
-    background-image: url("../../img/ramka.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero {
+    &::after {
+      width: 380px;
+      height: 400px;
+      left: calc(100% - 380px);
+    }
+    &__container {
+      &::before {
+        width: 67px;
+      }
+    }
+    &__header {
+      font-size: 38px;
+      margin-bottom: 9px;
+    }
+    &__subheader {
+      font-size: 10px;
+      margin-bottom: 15px;
+    }
+    &__wrapper {
+      padding-left: 90px;
+      padding-right: 90px;
+      padding-top: 150px;
+    }
   }
 }

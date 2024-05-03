@@ -65,3 +65,24 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .calendar {
+    &::before {
+      width: 160px;
+      height: 360px;
+    }
+    &::after {
+      width: 100px;
+    }
+    &__header {
+      font-size: 56px;
+    }
+
+    &__wrapper {
+      &::after {
+        right: 0;
+      }
+    }
+  }
+}

@@ -99,6 +99,10 @@ html {
   align-items: center;
   justify-content: center;
   position: relative;
+  background-image: url("../../img/ramka.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .hero__container::before {
   position: absolute;
@@ -131,12 +135,31 @@ html {
   align-items: center;
   justify-content: center;
   padding: 170px 190px;
-  background-image: url("../../img/ramka.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
+@media screen and (max-width: 450px) {
+  .hero::after {
+    width: 380px;
+    height: 400px;
+    left: calc(100% - 380px);
+  }
+  .hero__container::before {
+    width: 67px;
+  }
+  .hero__header {
+    font-size: 38px;
+    margin-bottom: 9px;
+  }
+  .hero__subheader {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .hero__wrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 150px;
+  }
+}
 .invite {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -161,6 +184,15 @@ html {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 450px) {
+  .invite__body {
+    font-size: 16px;
+  }
+  .invite__header {
+    font-size: 56px;
+    margin-bottom: 25px;
+  }
+}
 .calendar {
   position: relative;
   margin-bottom: 30px;
@@ -228,6 +260,21 @@ html {
   right: calc(0% + 35px);
 }
 
+@media screen and (max-width: 450px) {
+  .calendar::before {
+    width: 160px;
+    height: 360px;
+  }
+  .calendar::after {
+    width: 100px;
+  }
+  .calendar__header {
+    font-size: 56px;
+  }
+  .calendar__wrapper::after {
+    right: 0;
+  }
+}
 .program__date, .program__time {
   font-family: cagliostro;
   color: #ba9845;
@@ -303,6 +350,38 @@ html {
   justify-content: flex-end;
 }
 
+@media screen and (max-width: 450px) {
+  .program__header {
+    font-size: 56px;
+  }
+  .program__date, .program__time {
+    font-size: 15px;
+  }
+  .program__location-header {
+    font-size: 18px;
+  }
+  .program__location-map {
+    font-size: 7px;
+  }
+  .program__main-img-link {
+    max-width: 93px;
+  }
+  .program__time-wrapper {
+    max-width: 95px;
+  }
+  .program__location-subtext {
+    font-size: 9px;
+  }
+  .program__location {
+    max-width: 160px;
+  }
+  .program__another {
+    font-size: 6px;
+  }
+  .program__location-icon {
+    width: 8px;
+  }
+}
 .final {
   position: relative;
 }
@@ -366,4 +445,21 @@ html {
   padding: 20px 40px;
   border: 2px solid #ba9845;
   margin-bottom: 100px;
+}
+
+@media screen and (max-width: 450px) {
+  .final::before {
+    width: 100px;
+    height: 175px;
+  }
+  .final__header {
+    font-size: 44px;
+  }
+  .final__text {
+    font-size: 14px;
+    margin-left: 14px;
+  }
+  .final__wrapper {
+    padding: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */
