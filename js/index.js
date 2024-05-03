@@ -105,7 +105,7 @@ function handleRelease() {
       console.error("Error attempting to play audio:", error);
     }
     musicIcon.src = "./img/unmute.svg";
-    isPlaying = true;
+    isPlaying = !isPlaying;
   } else {
     slider.style.left = "0px";
   }
