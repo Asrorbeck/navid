@@ -97,8 +97,6 @@ function handleRelease() {
           })
           .catch((error) => {
             console.error("Playback failed:", error);
-            // Handle or log the error
-            // Optionally, inform the user that manual interaction is needed
           });
       }
     } catch (error) {
@@ -112,3 +110,23 @@ function handleRelease() {
 }
 
 addEventListeners(document, ["mouseup", "touchend"], handleRelease);
+
+slider.addEventListener("mouseup", function () {
+  // assuming this is a user-initiated action
+  tryPlayAudio();
+});
+
+function tryPlayAudio() {
+  const playPromise = audio.play();
+
+  if (playPromise !== undefined) {
+    playPromise
+      .then(() => {
+        console.log("Audio started!");
+      })
+      .catch((error) => {
+        console.error("Error trying to play audio:", error);
+        // Optionally, show some UI to the user to manually start the playback
+      });
+  }
+}
