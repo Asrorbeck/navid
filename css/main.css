@@ -171,7 +171,7 @@ html {
   position: absolute;
   left: 50%;
   transform: translateY(-50%);
-  top: calc(50% + 200px);
+  top: calc(50% + 100px);
   transform: rotate(0deg);
   cursor: pointer;
   margin-top: 70px;
@@ -214,6 +214,15 @@ html {
     width: 3.5vw;
     height: 3.5vw;
   }
+  .arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    top: calc(50% + 200px);
+    transform: rotate(0deg);
+    cursor: pointer;
+    margin-top: 70px;
+  }
 }
 .container {
   max-width: 1240px;
@@ -234,19 +243,25 @@ html {
 }
 
 .logo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Same height as .logo */
-  background-image: url("../../img/footer.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
-  transform: rotate(180deg); /* Adjust the rotation angle as needed */
+  display: none; /* Adjust the rotation angle as needed */
 }
 
+@media screen and (max-width: 750px) {
+  .logo::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Same height as .logo */
+    background-image: url("../../img/footer.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    transform: rotate(180deg);
+  }
+}
 .hero {
   height: 100vh;
   position: relative;

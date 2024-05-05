@@ -99,7 +99,7 @@ html {
   position: absolute;
   left: 50%;
   transform: translateY(-50%);
-  top: calc(50% + 200px);
+  top: calc(50% + 100px);
   transform: rotate(0deg);
   cursor: pointer;
   margin-top: 70px;
@@ -141,5 +141,15 @@ html {
   .arrow span {
     width: 3.5vw;
     height: 3.5vw;
+  }
+
+  .arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    top: calc(50% + 200px);
+    transform: rotate(0deg);
+    cursor: pointer;
+    margin-top: 70px;
   }
 }

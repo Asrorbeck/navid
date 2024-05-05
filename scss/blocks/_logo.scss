@@ -9,15 +9,22 @@
 }
 
 .logo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Same height as .logo */
-  background-image: url("../../img/footer.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
-  transform: rotate(180deg); /* Adjust the rotation angle as needed */
+  display: none; /* Adjust the rotation angle as needed */
+}
+
+@media screen and (max-width: 750px) {
+  .logo::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Same height as .logo */
+    background-image: url("../../img/footer.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    transform: rotate(180deg);
+  }
 }
