@@ -13,6 +13,10 @@
 }
 
 @media screen and (max-width: 750px) {
+  .logo {
+    padding: 0;
+  }
+
   .logo::before {
     content: "";
     position: absolute;
