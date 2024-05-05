@@ -224,11 +224,29 @@ html {
 }
 
 .logo {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  padding-bottom: 80px; /* Ensure the pseudo-element does not overflow the container */
 }
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Same height as .logo */
+  background-image: url("../../img/footer.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  transform: rotate(180deg); /* Adjust the rotation angle as needed */
+}
+
 .hero {
   height: 100vh;
   position: relative;
@@ -273,19 +291,6 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
-.hero__container::before {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  width: 100px;
-  height: 170px;
-  background-image: url("../../img/logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  right: 0;
-  top: calc(0% + 15px);
 }
 .hero__header {
   font-family: Tangerine;

@@ -42,19 +42,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    &::before {
-      position: absolute;
-      display: inline-block;
-      content: "";
-      width: 100px;
-      height: 170px;
-      background-image: url("../../img/logo.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      right: 0;
-      top: calc(0% + 15px);
-    }
   }
   &__header {
     font-family: Tangerine;
