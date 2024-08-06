@@ -30,6 +30,10 @@ img {
   vertical-align: middle;
 }
 
+a {
+  text-decoration: none;
+}
+
 .fixed {
   position: fixed;
   z-index: 10;
@@ -68,6 +72,23 @@ img {
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/tangerine-v17-latin-700.woff2") format("woff2"), url("../fonts/tangerine-v17-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* great-vibes-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: Vibes;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/great-vibes-v19-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/great-vibes-v19-cyrillic_latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* bellota-regular - latin */
+/* bellota-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Bellota";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/bellota-v16-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/bellota-v16-cyrillic_latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 html {
   scroll-behavior: smooth;
@@ -196,6 +217,11 @@ html {
   animation-delay: -0.4s;
 }
 
+iframe {
+  max-width: 600px;
+  width: 100%;
+}
+
 @keyframes animate {
   0% {
     opacity: 0;
@@ -311,13 +337,13 @@ html {
   background-size: contain;
 }
 .hero__header {
-  font-family: Tangerine;
+  font-family: Vibes;
   font-weight: bold;
   font-size: 60px;
   color: #ba9845;
 }
 .hero__subheader {
-  font-family: Cagliostro;
+  font-family: Bellota;
   text-align: center;
   color: rgba(186, 153, 69, 0.5);
   margin-bottom: 40px;
@@ -342,12 +368,14 @@ html {
     width: 67px;
   }
   .hero__header {
-    font-size: 38px;
-    margin-bottom: 9px;
+    font-size: 48px;
+    line-height: 38px;
+    margin: 0;
+    font-weight: 400;
   }
   .hero__subheader {
-    font-size: 10px;
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
   }
   .hero__wrapper {
     padding-bottom: 25px;
@@ -359,7 +387,7 @@ html {
 }
 .invite__body {
   text-align: center;
-  font-family: Cagliostro;
+  font-family: Bellota;
   max-width: 500px;
   font-size: 20px;
   color: hwb(43 27% 27%/0.8);
@@ -371,7 +399,9 @@ html {
   justify-content: center;
 }
 .invite__header {
-  font-family: Tangerine;
+  font-family: Vibes;
+  text-align: center;
+  font-weight: 400;
   font-size: 80px;
   color: #ba9845;
   margin-bottom: 30px;
@@ -382,7 +412,7 @@ html {
     font-size: 16px;
   }
   .invite__header {
-    font-size: 56px;
+    font-size: 48px;
     margin-bottom: 25px;
   }
 }
@@ -422,18 +452,50 @@ html {
   align-items: center;
   justify-content: center;
 }
-.calendar__header {
-  font-family: Tangerine;
+.calendar__header, .calendar__year {
+  font-family: Vibes;
   font-size: 80px;
+  font-weight: 400;
   color: #ba9845;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
 }
 .calendar__img {
   max-width: 700px;
   width: 100%;
   margin-bottom: 35px;
+}
+.calendar__time-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.calendar__line {
+  width: 2px;
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: none;
+  outline: none;
+  background-color: #ba9845;
+  border: none;
+}
+.calendar__date {
+  font-family: Bellota;
+  font-size: 98px;
+  font-weight: bold;
+  color: #ba9845;
+}
+.calendar__time {
+  font-family: Vibes;
+  font-size: 32px;
+  font-weight: 400;
+  color: #ba9845;
+}
+.calendar__time {
+  font-family: Bellota;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 .calendar__wrapper {
   position: relative;
@@ -461,149 +523,215 @@ html {
   .calendar::after {
     width: 100px;
   }
-  .calendar__header {
-    font-size: 56px;
+  .calendar__header, .calendar__year {
+    font-size: 32px;
+  }
+  .calendar__line {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .calendar__date {
+    font-size: 38px;
   }
   .calendar__wrapper::after {
     right: 0;
   }
 }
-.program__date, .program__time {
-  font-family: cagliostro;
+.program {
+  position: relative;
+}
+.program::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100px;
+  height: 175px;
+  bottom: calc(0% - 45px);
+  left: 0;
+  background-image: url("../../img/map.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+.program__body {
+  font-family: Bellota;
+  text-align: center;
   color: #ba9845;
-  font-size: 22px;
+  margin-bottom: 10px;
+}
+.program__button {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: Vibes;
+  max-width: 255px;
+  font-weight: 400;
+  padding: 6px 24px;
+  padding-top: 10px;
+  border-radius: 47px;
+  border: 2px solid #ba9845;
+  margin-bottom: 15px;
+  color: #ba9845;
+}
+.program__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.program__footer {
+  text-align: center;
+  font-family: Bellota;
+  color: #ba9845;
 }
 .program__header {
-  font-family: Tangerine;
-  font-size: 80px;
+  font-size: 48px;
+  font-family: Vibes;
   color: #ba9845;
+  font-weight: 400;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
-.program__item {
+
+.form {
+  margin-top: 45px;
+  padding-bottom: 45px;
+  position: relative;
+}
+.form::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 150px;
+  height: 240px;
+  background-image: url("../../img/form.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: calc(0% - 140px);
+  right: 0;
+  z-index: -1;
+}
+.form__btn {
+  padding: 8px 16px;
+  background-color: #ba9845;
+  border-radius: 50px;
+  color: #fff;
+  font-family: Bellota;
+  font-size: 18px;
+}
+.form__btn-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
+  justify-content: center;
 }
-.program__line {
-  width: 2px;
-  height: 80px;
+.form__header {
+  font-family: Vibes;
+  font-size: 48px;
+  font-weight: 400;
+  color: #ba9845;
+  text-align: center;
+}
+.form__input {
+  padding: 8px 16px;
+  border-radius: 55px;
   border: none;
-  background-color: #ba9845;
-  margin: 0;
+  background: none;
+  outline: none;
+  border: 2px solid #ba9845;
+  font-family: Bellota;
+  font-size: 16px;
+  color: #ba9845;
 }
-.program__location {
-  max-width: 335px;
-  width: 100%;
+.form__input-name {
+  font-family: Bellota;
+  margin-bottom: 5px;
+  color: #ba9845;
+}
+.form__subheader {
+  font-family: Bellota;
+  text-align: center;
+  color: #ba9845;
+  margin-bottom: 20px;
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.telegram__body {
+  text-align: center;
+  font-family: Bellota;
+  color: #ba9845;
+  margin-bottom: 20px;
+}
+.telegram__header {
+  font-family: Vibes;
+  font-size: 48px;
+  color: #ba9845;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.telegram__link {
+  padding: 8px 24px;
+  border: 2px solid #ba9845;
+  border-radius: 50px;
+  color: #ba9845;
+  font-family: Bellota;
+  transition: all 0.3s ease;
+}
+.telegram__link:hover {
+  transform: scale(1.05);
+}
+.telegram__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  padding-top: 50px;
+}
+.timer__body {
+  font-size: 20px;
+  font-family: Bellota;
+  color: #ba9845;
+}
+.timer__footer {
+  font-family: Vibes;
+  font-size: 48px;
+  color: #ba9845;
+  text-align: center;
+}
+.timer__header {
+  font-size: 48px;
+  font-family: Bellota;
+  color: #ba9845;
+  text-align: center;
+  font-weight: 400;
+}
+.timer__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.program__location-header {
-  font-family: cagliostro;
-  color: #ba9845;
-  font-size: 30px;
-}
-.program__location-icon {
-  width: 15px;
-}
-.program__location-map {
-  background-color: #ba9845;
+.timer__list {
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 5px;
-  border-radius: 4px;
-  color: #fff;
-  font-family: cagliostro;
-  width: 100%;
-  margin-bottom: 2px;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
-.program__location-subtext {
-  font-family: cagliostro;
-  font-size: 20px;
+.timer__time {
+  font-size: 48px;
+  font-family: Vibes;
   color: #ba9845;
 }
-.program__main-img-link {
-  width: 150px;
-}
-.program__subtext {
-  font-family: cagliostro;
-  font-size: 10px;
-}
-.program__time-wrapper {
-  max-width: 130px;
-  width: 100%;
-}
-.program__wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-}
-.program__main-link {
-  text-decoration: none;
-  width: 100%;
-}
 
-@media screen and (max-width: 700px) {
-  .program__header {
-    font-size: 56px;
-  }
-  .program__date, .program__time {
-    font-size: 14px;
-  }
-  .program__location-header {
-    font-size: 16px;
-  }
-  .program__location-map {
-    font-size: 7px;
-  }
-  .program__main-img-link {
-    max-width: 93px;
-  }
-  .program__time-wrapper {
-    max-width: 85px;
-  }
-  .program__location-subtext {
-    font-size: 9px;
-  }
-  .program__location {
-    max-width: 160px;
-  }
-  .program__another {
-    font-size: 6px;
-  }
-  .program__location-icon {
-    width: 8px;
-  }
-  .program__subtext {
-    font-size: 5px;
-  }
-}
-@media screen and (max-width: 390px) {
-  .program__location-header {
-    font-size: 13px;
-  }
-  .program__location-map {
-    font-size: 7px;
-  }
-  .program__another {
-    font-size: 6px;
-  }
-}
-@media screen and (max-width: 370px) {
-  .program__location-header {
-    font-size: 12px;
-  }
-  .program__location-map {
-    font-size: 6px;
-  }
-  .program__another {
-    font-size: 5px;
-  }
-}
 .final {
   background-image: url("../../img/footer.png");
   background-repeat: no-repeat;
@@ -612,33 +740,11 @@ html {
   padding-bottom: 650px;
   position: relative;
 }
-.final::before {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  width: 170px;
-  height: 300px;
-  top: calc(0% + 100px);
-  left: 0;
-  background-image: url("../../img/final.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
 .final__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.final__header {
-  font-family: Tangerine;
-  font-size: 80px;
-  text-align: center;
-  margin-top: 40px;
-  font-weight: bold;
-  color: #ba9845;
-  margin-bottom: 50px;
 }
 .final__img {
   width: 70px;
@@ -648,19 +754,13 @@ html {
   text-decoration: none;
   font-size: 20px;
   color: #726851;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 .final__text {
   margin-left: 55px;
 }
 .final__wrapper {
-  display: flex;
-  align-items: center;
-  font-family: cagliostro;
-  font-size: 25px;
-  padding: 20px 40px;
-  border: 2px solid #ba9845;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 @media screen and (max-width: 700px) {

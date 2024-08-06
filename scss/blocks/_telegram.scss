@@ -1,0 +1,36 @@
+.telegram {
+  &__body {
+    text-align: center;
+    font-family: Bellota;
+    color: #ba9845;
+    margin-bottom: 20px;
+  }
+  &__container {
+  }
+  &__header {
+    font-family: Vibes;
+    font-size: 48px;
+    color: #ba9845;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  &__link {
+    padding: 8px 24px;
+    border: 2px solid #ba9845;
+    border-radius: 50px;
+    color: #ba9845;
+    font-family: Bellota;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

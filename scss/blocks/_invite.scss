@@ -3,7 +3,7 @@
   margin-bottom: 50px;
   &__body {
     text-align: center;
-    font-family: Cagliostro;
+    font-family: Bellota;
     max-width: 500px;
     font-size: 20px;
     color: hwb(43 27% 27% / 0.8);
@@ -15,7 +15,9 @@
     justify-content: center;
   }
   &__header {
-    font-family: Tangerine;
+    font-family: Vibes;
+    text-align: center;
+    font-weight: 400;
     font-size: 80px;
     color: #ba9845;
     margin-bottom: 30px;
@@ -30,7 +32,7 @@
     &__container {
     }
     &__header {
-      font-size: 56px;
+      font-size: 48px;
       margin-bottom: 25px;
     }
   }

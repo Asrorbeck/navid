@@ -1,168 +1,57 @@
 .program {
-  &__container {
+  position: relative;
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 175px;
+    bottom: calc(0% - 45px);
+    left: 0;
+    background-image: url("../../img/map.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
   }
-  &__date,
-  &__time {
-    font-family: cagliostro;
-    color: #ba9845;
-    font-size: 22px;
-  }
-  &__header {
-    font-family: Tangerine;
-    font-size: 80px;
-    color: #ba9845;
+  &__body {
+    font-family: Bellota;
     text-align: center;
-    margin-bottom: 30px;
+    color: #ba9845;
+    margin-bottom: 10px;
   }
-  &__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
+  &__button {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: Vibes;
+    max-width: 255px;
+    font-weight: 400;
+    padding: 6px 24px;
+    padding-top: 10px;
+    border-radius: 47px;
+    border: 2px solid #ba9845;
+    margin-bottom: 15px;
+    color: #ba9845;
   }
-  &__line {
-    width: 2px;
-    height: 80px;
-    border: none;
-    background-color: #ba9845;
-    margin: 0;
-  }
-  &__list {
-  }
-  &__location {
-    max-width: 335px;
-    width: 100%;
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  &__location-header {
-    font-family: cagliostro;
-    color: #ba9845;
-    font-size: 30px;
-  }
-  &__location-icon {
-    width: 15px;
-  }
-  &__location-map {
-    background-color: #ba9845;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 5px;
-    padding: 5px;
-    border-radius: 4px;
-    color: #fff;
-    font-family: cagliostro;
-    width: 100%;
-    margin-bottom: 2px;
   }
-  &__location-subtext {
-    font-family: cagliostro;
-    font-size: 20px;
+  &__footer {
+    text-align: center;
+    font-family: Bellota;
     color: #ba9845;
   }
-  &__main-img {
-  }
-  &__main-img-link {
-    width: 150px;
-  }
-  &__subtext {
-    font-family: cagliostro;
-    font-size: 10px;
-  }
-  &__time-wrapper {
-    max-width: 130px;
-    width: 100%;
-  }
-  &__wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-  }
-  &__main-link {
-    text-decoration: none;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .program {
-    &__header {
-      font-size: 56px;
-    }
-
-    &__date,
-    &__time {
-      font-size: 14px;
-    }
-
-    &__location-header {
-      font-size: 16px;
-    }
-
-    &__location-map {
-      font-size: 7px;
-    }
-
-    &__main-img-link {
-      max-width: 93px;
-    }
-
-    &__time-wrapper {
-      max-width: 85px;
-    }
-
-    &__location-subtext {
-      font-size: 9px;
-    }
-
-    &__location {
-      max-width: 160px;
-    }
-
-    &__another {
-      font-size: 6px;
-    }
-
-    &__location-icon {
-      width: 8px;
-    }
-
-    &__subtext {
-      font-size: 5px;
-    }
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .program {
-    &__location-header {
-      font-size: 13px;
-    }
-
-    &__location-map {
-      font-size: 7px;
-    }
-
-    &__another {
-      font-size: 6px;
-    }
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .program {
-    &__location-header {
-      font-size: 12px;
-    }
-
-    &__location-map {
-      font-size: 6px;
-    }
-
-    &__another {
-      font-size: 5px;
-    }
+  &__header {
+    font-size: 48px;
+    font-family: Vibes;
+    color: #ba9845;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }

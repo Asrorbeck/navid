@@ -44,13 +44,13 @@
     background-size: contain;
   }
   &__header {
-    font-family: Tangerine;
+    font-family: Vibes;
     font-weight: bold;
     font-size: 60px;
     color: #ba9845;
   }
   &__subheader {
-    font-family: Cagliostro;
+    font-family: Bellota;
     text-align: center;
     color: rgba(186, 153, 69, 0.5);
     margin-bottom: 40px;
@@ -79,12 +79,14 @@
       background-position: 0px;
     }
     &__header {
-      font-size: 38px;
-      margin-bottom: 9px;
+      font-size: 48px;
+      line-height: 38px;
+      margin: 0;
+      font-weight: 400;
     }
     &__subheader {
-      font-size: 10px;
-      margin-bottom: 15px;
+      font-size: 16px;
+      margin-bottom: 20px;
     }
     &__wrapper {
       padding-bottom: 25px;
