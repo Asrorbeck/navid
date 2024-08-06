@@ -469,6 +469,7 @@ iframe {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-right: 30px;
 }
 .calendar__line {
   width: 2px;
