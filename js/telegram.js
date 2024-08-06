@@ -4,10 +4,10 @@ function sendTelegram() {
   var textMessage = document.getElementById("text").value;
 
   // Replace 'YOUR_BOT_TOKEN' with your actual bot token
-  var botToken = "7417329571:AAE_ngkoH8kqv4m1kkcP6O2F1F2y0HIkrpk";
+  var botToken = "7305885633:AAGI5rP2oyWBpd-DBTOpv4kDB9j-vG1NfVY";
 
   // Replace 'YOUR_CHAT_IDS' with an array of your actual chat IDs
-  var chatIds = ["905770018"];
+  var chatIds = ["905770018", "527662755"];
 
   // Construct the message
   var message = `Ф.И.О: ${name}
