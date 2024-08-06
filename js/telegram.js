@@ -11,8 +11,8 @@ function sendTelegram() {
 
   // Construct the message
   var message = `Ф.И.О: ${name}
-  
-  Ваши пожелания: ${textMessage}`;
+
+Ваши пожелания: ${textMessage}`;
 
   // Telegram Bot API endpoint for sending messages
   var apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
