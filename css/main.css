@@ -55,7 +55,8 @@ a {
   font-family: "Cagliostro";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/cagliostro-v21-latin-regular.woff2") format("woff2"), url("../fonts/cagliostro-v21-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/cagliostro-v21-latin-regular.woff2") format("woff2"),
+    url("../fonts/cagliostro-v21-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* tangerine-regular - latin */
 @font-face {
@@ -63,7 +64,8 @@ a {
   font-family: "Tangerine";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/tangerine-v17-latin-regular.woff2") format("woff2"), url("../fonts/tangerine-v17-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/tangerine-v17-latin-regular.woff2") format("woff2"),
+    url("../fonts/tangerine-v17-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* tangerine-700 - latin */
 @font-face {
@@ -71,7 +73,8 @@ a {
   font-family: "Tangerine";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/tangerine-v17-latin-700.woff2") format("woff2"), url("../fonts/tangerine-v17-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/tangerine-v17-latin-700.woff2") format("woff2"),
+    url("../fonts/tangerine-v17-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* great-vibes-regular - cyrillic_latin */
 @font-face {
@@ -79,7 +82,10 @@ a {
   font-family: Vibes;
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/great-vibes-v19-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/great-vibes-v19-cyrillic_latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/great-vibes-v19-cyrillic_latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/great-vibes-v19-cyrillic_latin-regular.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* bellota-regular - latin */
 /* bellota-regular - cyrillic_latin */
@@ -88,7 +94,8 @@ a {
   font-family: "Bellota";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/bellota-v16-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/bellota-v16-cyrillic_latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/bellota-v16-cyrillic_latin-regular.woff2") format("woff2"),
+    url("../fonts/bellota-v16-cyrillic_latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 html {
   scroll-behavior: smooth;
@@ -136,7 +143,7 @@ html {
   height: 100%;
   background: rgba(255, 255, 255, 0.03); /* Light white overlay */
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -284,7 +291,7 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%; /* Same height as .logo */
-    background-image: url("../../img/footer.png");
+    background-image: url("../img/footer.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;
@@ -307,7 +314,7 @@ iframe {
   display: inline-block;
   width: 300px;
   height: 315px;
-  background-image: url("../../img/header-2.png");
+  background-image: url("../img/header-2.png");
   background-repeat: no-repeat;
   left: calc(100% - 300px);
   bottom: 0;
@@ -320,7 +327,7 @@ iframe {
   display: inline-block;
   width: 300px;
   height: 300px;
-  background-image: url("../../img/header-1.png");
+  background-image: url("../img/header-1.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -331,7 +338,7 @@ iframe {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url("../../img/ramka.png");
+  background-image: url("../img/ramka.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -426,7 +433,7 @@ iframe {
   display: inline-block;
   width: 280px;
   height: 430px;
-  background-image: url("../../img/calendar-1.png");
+  background-image: url("../img/calendar-1.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -439,7 +446,7 @@ iframe {
   display: inline-block;
   width: 180px;
   height: 260px;
-  background-image: url("../../img/calendar-2.png");
+  background-image: url("../img/calendar-2.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -452,7 +459,8 @@ iframe {
   align-items: center;
   justify-content: center;
 }
-.calendar__header, .calendar__year {
+.calendar__header,
+.calendar__year {
   font-family: Vibes;
   font-size: 80px;
   font-weight: 400;
@@ -508,7 +516,7 @@ iframe {
   content: "";
   width: 63px;
   height: 59px;
-  background-image: url("../../img/angle.png");
+  background-image: url("../img/angle.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -524,7 +532,8 @@ iframe {
   .calendar::after {
     width: 100px;
   }
-  .calendar__header, .calendar__year {
+  .calendar__header,
+  .calendar__year {
     font-size: 32px;
   }
   .calendar__line {
@@ -549,7 +558,7 @@ iframe {
   height: 175px;
   bottom: calc(0% - 45px);
   left: 0;
-  background-image: url("../../img/map.png");
+  background-image: url("../img/map.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -607,7 +616,7 @@ iframe {
   content: "";
   width: 150px;
   height: 240px;
-  background-image: url("../../img/form.png");
+  background-image: url("../img/form.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -734,7 +743,7 @@ iframe {
 }
 
 .final {
-  background-image: url("../../img/footer.png");
+  background-image: url("../img/footer.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 100% 100%;
@@ -782,4 +791,4 @@ iframe {
   .final__wrapper {
     padding: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
